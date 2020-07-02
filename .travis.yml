@@ -15,6 +15,7 @@ deploy:
   edge: true
   api_key:
     secure: "$HEROKU_TOKEN"
+  skip_cleanup: true
   local-dir: dist/
   app: rickandmortyspa
   target-brach: deployment
