@@ -18,6 +18,6 @@ deploy:
   local-dir: dist/
   app: rickandmortyspa
   target-branch: deployment
-  commit_message: "Deploy Release"
+  commit-message: "Deploy Release"
   on:
     branch: master
