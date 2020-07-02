@@ -12,11 +12,11 @@ deploy:
   provider: heroku
   edge: true
   skip_cleanup: true
-  keep-history: true
+  keep_history: true
   api_key:
     secure: $HEROKU_TOKEN
   local-dir: dist/
-  target-branch: master
+  target_branch: master
   commit_message: 'Deploy Release'
   on:
     branch: master
