@@ -17,5 +17,6 @@ deploy:
     secure: "$HEROKU_TOKEN"
   local-dir: dist/
   app: rickandmortyspa
+  target-brach: deployment
   on:
-    repo: nrestrepo05/rickandmortyspa
+    branch: master
