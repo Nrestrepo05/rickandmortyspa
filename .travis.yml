@@ -17,7 +17,7 @@ deploy:
     secure: "$HEROKU_TOKEN"
   local-dir: dist/
   app: rickandmortyspa
-  target-brach: deployment
+  target-branch: deployment
   commit_message: "Deploy Release"
   on:
     branch: master
