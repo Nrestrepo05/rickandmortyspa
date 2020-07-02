@@ -10,14 +10,14 @@ script:
 - yarn build
 deploy:
   provider: heroku
-  git:
-    depth: 3
   edge: true
+  skip_cleanup: true
+  keep-history: true
   api_key:
     secure: "$HEROKU_TOKEN"
-  skip_cleanup: true
-  local-dir: dist/
+  local-dir: dist-
   app: rickandmortyspa
   target-brach: deployment
+  commit_message: "Deploy Release"
   on:
     branch: master
