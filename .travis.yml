@@ -14,6 +14,9 @@ deploy:
   skip_cleanup: true
   keep-history: true
   api_key:
-    secure: 
+    secure: $HEROKU_TOKEN
   local-dir: dist/
-  target: 
+  target-branch: master
+  commit_message: 'Deploy Release'
+  on:
+    branch: master
