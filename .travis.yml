@@ -1,17 +1,21 @@
 language: node_js
 cache:
   directories:
-  - "~/.npm"
+    - ~/.npm
 node_js:
-- '12'
+  - '12'
 git:
   depth: 3
 script:
-- yarn build
+  - yarn build
 deploy:
-  provider: heroku
+  provider: pages
   edge: true,
-  api_key:
-    secure: YqXQgWT1u62Yqf7624vzZJSmgK8yq3Al1pYrf+J3Lcz19hSd6oPS/BHas6mBX1pTe/0lDgcVUSo/XHoMitEuHLaz/kRoOAVrZ2ysruDHsOiNb+TfFFbCeWzZ4+jRaD3C9npLHc+UFEbfEo/dSZ1AEerYBDP9VQ4bzE14dxU7YCyHqkoiUPNf1xOH+OOSZDytXQKrGFnuoilJ0ss444e+0sKGP0+wxjDtOy7uZt/tp+ydbgrRSfj31JkHZvJ3AglOBMmuhpkhXlHO3ZDZqNznc47e7Ll8+YI3wFD2eNdIcy+Vbvv9kaCtG9aW0vyEafeJoZSCM/dKv4R/4dX1kmMGVxW14BdiOnLEEdtY/79DzAX/idi2BW23Ao8cdKDr26H56g/TlV0HGbMkO5ob950Ln70Hym6rz+ABOmdP2vkmZskQvbdsmWPIQgKHOmmBaoCTmoXrKP4QoAeAJ6z7LbhIoYUqcopsAGProLbLfMRdbk7Z7olswj4i+rc/MgdmJHUQT7q0Lg5NOOcd+X+GCadeUmiUyo778AdXG9GVAlV8qHHfeWqXMnZOaks9jDWH5oZ+PYOOnrI8/FXXWSIrXt1dJLa1mEJcnwMllJKbaXveqEg62A/TurDR5ZqUU9J5jV03eM+0Qjyb6+7zUVCQ2a8iOoHDpleBhXAnerpxLocpUlU=
+  skip-cleanup : true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/
+  target-brach: gh-pages
+  commit_message: "Deploy Release"
   on:
     branch: master
