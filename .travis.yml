@@ -3,14 +3,15 @@ cache:
   directories:
   - "~/.npm"
 node_js:
-  - '12'
+- '12'
 git:
   depth: 3
 script:
-  - yarn build
+- yarn build
 deploy:
   provider: heroku
-  api_key: $HEROKU_TOKEN
+  api_key:
+    secure: wsCTzbnzSO/NF8dambv1n3fXEKdf3P9cdDgauRTHS7jHYVy0ZnwctmJxMxWNhfHhosnn6UHQPkNJmFrjhXq1pnL7/7RRAtk1aE5Zdy4R/OCFWuBBkNh1FSyzcKJ0jcVgt0dLeAR5ffXgkCift361mdDLJu/5gzzk8LmCz3vV2lDe9zBTFYOtSh/65TfTCla/Z3F+KDvsC0lb1qk5uckDUeNtpz1cMvsQ7BWpC7S5ela5IgHnGl3p5vUjCkQXpgNuvTwCEl96VZ6RhkEvPqGsEzvo/Fa6OiAyWIwgrvrF8EO/ckREJIH8BRnQx2MrRHZ9FtLuKK9N2c8Pk9sMqF92Gb4jVb0Td78v+9uZoitBrN1673KaMZdA53nvb+x0oMV9liZEMg7ldyyavFJeg44KEfLb0PyAdnCILUDFTRCp6fjqr/QNg3aCrCGvosb4zI8lse8aKkzelOpF6IhI/fSQvtE57JATh1hOE3rqrOzCouv7ngsHRy84mzzylB72i79u+mg7mlXKMBr8euYX6xTSFZ1sexahRri9ne6e+rXiHzbPTeqc2fcktTR2LjLbtHAcgmB6FxlUr0AsmUK871H54gUrPY2dAGkq1D8u/7Hp6jUoLkQ05i1H036xRDsHJUIIeARu/7HqbEbwru8OPBFBNkD7nKBdSj7gym3hqNR2gso=
   app: rickandmortyspa
   on:
     branch: master
