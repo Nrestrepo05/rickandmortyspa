@@ -12,7 +12,6 @@ deploy:
   provider: heroku
   edge: true,
   skip_cleanup: true
-  keep-history: true
   api_key:
     secure: "$HEROKU_TOKEN"
   local-dir: dist/
