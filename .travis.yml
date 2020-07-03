@@ -13,6 +13,5 @@ deploy:
   edge: true,
   api_key:
     secure: "$HEROKU_TOKEN"
-  target-branch: deployment
   on:
     branch: master
