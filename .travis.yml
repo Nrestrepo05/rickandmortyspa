@@ -1,21 +1,17 @@
 language: node_js
 cache:
   directories:
-    - ~/.npm
+  - "~/.npm"
 node_js:
   - '12'
 git:
   depth: 3
-script:
+scripts:
   - yarn build
 deploy:
-  provider: pages
-  edge: true,
-  skip-cleanup : true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/
-  target-brach: gh-pages
-  commit_message: "Deploy Release"
+  provider: heroku
+  api_key:
+    secure: $HEROKU_TOKEN
+  app: rickandmortyspa
   on:
-    branch: master
+    repo: nrestrepo05/rickandmortyspa
