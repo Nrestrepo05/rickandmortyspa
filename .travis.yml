@@ -11,11 +11,8 @@ script:
 deploy:
   provider: heroku
   edge: true,
-  skip_cleanup: true
   api_key:
     secure: "$HEROKU_TOKEN"
-  local-dir: dist/
   target-branch: deployment
-  app: rickandmortyspa
   on:
     branch: master
