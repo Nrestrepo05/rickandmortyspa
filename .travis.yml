@@ -12,6 +12,6 @@ deploy:
   provider: heroku
   edge: true,
   api_key:
-    secure: "$HEROKU_TOKEN"
+    secure: $HEROKU_TOKEN
   on:
     branch: master
