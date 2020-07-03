@@ -7,7 +7,8 @@ node_js:
 git:
   depth: 3
 script:
-- yarn build
+  - yarn build
+  - node app.js
 deploy:
   provider: heroku
   api_key:
