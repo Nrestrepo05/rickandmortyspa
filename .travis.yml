@@ -14,4 +14,4 @@ deploy:
     secure: $HEROKU_TOKEN
   app: rickandmortyspa
   on:
-    repo: nrestrepo05/rickandmortyspa
+    branch: master
